@@ -1,0 +1,10 @@
+.needs-cont img{
+    margin-top: 150px;
+    width:1000px
+}
+.needs-cont{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 200px;
+}
