@@ -15,7 +15,31 @@
     align-items: center;
     margin-bottom: 10px;
   }
+  .alllistm img{
+    display: none;
+  }
   .footer img{
     width: 98%;
+  }
+  @media screen and (max-width: 550px){
+    .alllist img{
+      display: none;
+    }
+    .alllistm {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0px;
+      margin-bottom: 250px;
+    }
+    .alllistm img{
+      margin: -130px;
+      display:flex;
+      width:300px;
+    }
+    .footer img{
+      display: none;
+    }
+
   }
   

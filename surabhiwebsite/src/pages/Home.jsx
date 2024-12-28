@@ -1,32 +1,34 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Home.css';
-import video1 from '../assets/vid1.mp4';
-import video2 from '../assets/surabhi2.mp4';
-import y2024i from '../assets/2024i.jpg';
-import y2023i from '../assets/2023i.jpg';
-import y2022i from '../assets/2022i.jpg';
-import blur from '../assets/Rectangle 2.png';
-import l1 from '../assets/l1.png';
-import l2 from '../assets/l2.png';
-import l3 from '../assets/l3.png';
-import underline from '../assets/underline.png';
-import g1 from '../assets/g1.jpg';
-import g2 from '../assets/g2.jpg';
-import g3 from '../assets/g3.jpg';
-import g4 from '../assets/g4.jpg';
-import g5 from '../assets/g5.jpg';
-import g6 from '../assets/g6.jpg';
-import g7 from '../assets/g7.jpg';
-import g8 from '../assets/g8.jpg';
-import g9 from '../assets/g9.jpg';
-import g10 from '../assets/g10.jpg';
-import g11 from '../assets/g11.jpg';
-import y2024 from '../assets/2024.png';
-import y2023 from '../assets/2023.png';
-import y2022 from '../assets/2022.png';
-import footer from '../assets/footer.png';
+const video1 = 'https://res.cloudinary.com/ds18h1q0k/video/upload/v1735379791/vid1_wltntt.mp4';
+const video2 = 'https://res.cloudinary.com/ds18h1q0k/video/upload/v1735379794/surabhi2_ic7skj.mp4';
+const y2024i =  'https://res.cloudinary.com/ds18h1q0k/image/upload/v1735379758/2024i_b6r9hy.jpg';
+const y2023i = 'https://res.cloudinary.com/ds18h1q0k/image/upload/v1735379758/2023i_dp6r0u.jpg';
+const y2022i = 'https://res.cloudinary.com/ds18h1q0k/image/upload/v1735380198/2022i_ihzcmw.jpg';
+const blur = 'https://res.cloudinary.com/ds18h1q0k/image/upload/v1735379771/Rectangle_2_satwlt.png';
+const l1 = 'https://res.cloudinary.com/ds18h1q0k/image/upload/v1735379768/l1_fbb59e.png';
+const l2 = 'https://res.cloudinary.com/ds18h1q0k/image/upload/v1735379770/l2_jq04tj.png';
+const l3 = 'https://res.cloudinary.com/ds18h1q0k/image/upload/v1735379769/l3_kpm0f0.png';
+const underline = 'https://res.cloudinary.com/ds18h1q0k/image/upload/v1735379751/underline_ra5fgs.png';
+const g1 = 'https://res.cloudinary.com/ds18h1q0k/image/upload/v1735379767/g1_gth4yu.jpg';
+const g2 = 'https://res.cloudinary.com/ds18h1q0k/image/upload/v1735379766/g2_nwtfyi.jpg';
+const g3 = 'https://res.cloudinary.com/ds18h1q0k/image/upload/v1735379765/g3_ccux51.jpg';
+const g4 = 'https://res.cloudinary.com/ds18h1q0k/image/upload/v1735380176/g4_be5vwm.jpg';
+const g5 = 'https://res.cloudinary.com/ds18h1q0k/image/upload/v1735379764/g5_kfp48m.jpg';
+const g6 = 'https://res.cloudinary.com/ds18h1q0k/image/upload/v1735379762/g6_qeve0t.jpg';
+const g7 = 'https://res.cloudinary.com/ds18h1q0k/image/upload/v1735379751/g7_sqofuv.jpg';
+const g8 = 'https://res.cloudinary.com/ds18h1q0k/image/upload/v1735379761/g8_zzrckr.jpg';
+const g9 = 'https://res.cloudinary.com/ds18h1q0k/image/upload/v1735379751/g9_dyrmfz.jpg';
+const g10 = 'https://res.cloudinary.com/ds18h1q0k/image/upload/v1735379760/g10_zneydh.jpg';
+const g11 = 'https://res.cloudinary.com/ds18h1q0k/image/upload/v1735379759/g11_yvh7me.jpg';
+const y2024 = 'https://res.cloudinary.com/ds18h1q0k/image/upload/v1735379757/2024_blyzpk.png';
+const y2023 = 'https://res.cloudinary.com/ds18h1q0k/image/upload/v1735379754/2022_r8jbik.png';
+const y2022 = 'https://res.cloudinary.com/ds18h1q0k/image/upload/v1735379754/2022_r8jbik.png';
+const footer = 'https://res.cloudinary.com/ds18h1q0k/image/upload/v1735379767/footer_cvrjgz.png';
+const footermob = 'https://res.cloudinary.com/ds18h1q0k/image/upload/v1735379750/footermob_cmzq0p.png';
 import Lenis from '@studio-freight/lenis';
+
 
 
 const Home = () => {
@@ -218,6 +220,9 @@ const Home = () => {
 
       <div className="footer">
         <img src={footer} alt="" className="footer" />
+      </div>
+      <div className="footermob">
+      <img src={footermob} alt="" className="footermob" />
       </div>
     </div>
   );

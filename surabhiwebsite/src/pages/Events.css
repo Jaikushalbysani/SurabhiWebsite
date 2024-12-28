@@ -67,6 +67,9 @@ h1{
     padding: 2px 40px;
     background: rgb(0, 0, 0);
     border-radius: 40px;
+    display: flex;
+    align-items: center;
+    gap:100px;
 }
 .dright h3{
     font-weight: 400;
@@ -108,4 +111,43 @@ h1{
   }
   .footer img{
     width: 98%;
+  }
+
+  @media screen and (max-width: 550px){
+    .event h1{
+        font-size: 30px;
+        margin-bottom: -30px;
+        margin-top: 50px;
+    }
+    .box{
+        height:800px;
+        width:320px;
+        border-radius: 30px;
+        flex-direction: column;
+        gap:30px
+    }
+    .left h2{
+        font-size: 20px;
+    }
+    .left p{
+        width:300px;
+    }
+    .down{
+        flex-direction: column;
+        align-items: center;
+    }
+    .dleft button{
+        width:300px;
+    }
+    .right img{
+        width:250px;
+    }
+    .dright h3{
+        font-size: 9px;
+
+    }
+    .dright{
+        gap:35px;
+    }
+    
   }

@@ -1,7 +1,7 @@
 import React from 'react';
 import './Schedule.css';
-import sch1 from '../assets/sch1.png';
-import sch2 from '../assets/sch2.png';
+const sch1 = 'https://res.cloudinary.com/ds18h1q0k/image/upload/v1735378793/sch1_sqnms9.png';
+const sch2 = 'https://res.cloudinary.com/ds18h1q0k/image/upload/v1735379078/sch2_yrmntm.png';
 
 const Schedules = () => {
   return (

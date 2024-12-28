@@ -1,13 +1,18 @@
 import React from 'react';
 import './Eventslist.css';
-import alleve from '../assets/allevents.png';
-import footer from '../assets/footer.png';
+const alleve = 'https://res.cloudinary.com/ds18h1q0k/image/upload/v1735379754/allevents_f2vux6.png';
+const allevemob = 'https://res.cloudinary.com/ds18h1q0k/image/upload/v1735379750/alleventsmob_cihtcy.png';
+const footer = 'https://res.cloudinary.com/ds18h1q0k/image/upload/v1735379767/footer_cvrjgz.png';
 
 const Eventslist = () => {
   return (
     <div className="eventslist-container">
       <div className="alllist">
         <img src={alleve} alt="" className="alleve" />          
+      </div>
+
+      <div className="alllistm">
+       <img src={allevemob} alt="" className="allevemob" />    
       </div>
 
       <div className="footer">

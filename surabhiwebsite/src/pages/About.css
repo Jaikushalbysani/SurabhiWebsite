@@ -75,3 +75,29 @@
   .footer img{
     width: 98%;
   }
+  @media screen and (max-width: 550px){
+    .head h1{
+        font-size: 22px;
+        margin: 60px;
+    }
+    .head img{
+        width:450px;
+    }
+    .head p{
+        font-size: 13px;
+        width:350px;
+        line-height: 30px;
+    }
+    .team h1{
+        font-size: 22px;
+    }
+    .team img{
+        width: 450px;
+    }
+    .teammem img{
+        width:230px;
+    }
+    .teammem{
+        flex-direction: column;
+    }
+  }

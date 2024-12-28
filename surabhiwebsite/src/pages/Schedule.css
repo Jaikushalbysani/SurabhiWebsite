@@ -15,3 +15,8 @@
     transform: rotate3d(-1, 1, 0, 20deg);
     transition: 0.5s;
 }
+@media screen and (max-width: 550px){
+    .sch img{
+        width: 380px;
+    }
+}

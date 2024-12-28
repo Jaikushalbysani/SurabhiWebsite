@@ -1,8 +1,8 @@
 import React from 'react';
 import './About.css';
-import underline from '../assets/underline.png';
-import event from '../assets/cmgsoon.png';
-import footer from '../assets/footer.png';
+const underline = 'https://res.cloudinary.com/ds18h1q0k/image/upload/v1735379751/underline_ra5fgs.png';
+const event = 'https://res.cloudinary.com/ds18h1q0k/image/upload/v1735380954/cmgsoon_bo9wmm.png';
+const footer = 'https://res.cloudinary.com/ds18h1q0k/image/upload/v1735379767/footer_cvrjgz.png';
 
 const About = () => {
   return (

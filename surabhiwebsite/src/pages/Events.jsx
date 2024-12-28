@@ -1,10 +1,39 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import './Events.css';
-import event from '../assets/cmgsoon.png';
-import footer from '../assets/footer.png';
+const event = 'https://res.cloudinary.com/ds18h1q0k/image/upload/v1735380954/cmgsoon_bo9wmm.png';
+const footer = 'https://res.cloudinary.com/ds18h1q0k/image/upload/v1735379767/footer_cvrjgz.png';
 
 
 const Events = () => {
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    
+    // Select all elements with class 'box'
+    const boxes = document.querySelectorAll('.box');
+    
+    // Apply animation to each box
+    boxes.forEach(box => {
+      gsap.fromTo(box,
+        {
+          opacity: 0,
+          y: 100
+        },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1,
+          scrollTrigger: {
+            trigger: box,
+            start: "top bottom-=100",
+            toggleActions: "play none none reverse"
+          }
+        }
+      );
+    });
+  }, []);
+
   return (
     <div className="events-container">
       <div className="boxp">
@@ -19,7 +48,9 @@ const Events = () => {
                   <button>REGISTER</button>
                 </div>
                 <div className="dright">
-                  <h3>09 : 30 AM  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;25 | 02 | 2025 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Venue : KL University</h3>
+                  <h3>09 : 00 AM</h3>
+                  <h3>25 | 02 | 2025</h3>
+                  <h3>Venue : KL University</h3>
                 </div>
               </div>
             </div>
@@ -36,7 +67,9 @@ const Events = () => {
                   <button>REGISTER</button>
                 </div>
                 <div className="dright">
-                  <h3>09 : 30 AM  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;25 | 02 | 2025 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Venue : KL University</h3>
+                <h3>09 : 00 AM</h3>
+                  <h3>25 | 02 | 2025</h3>
+                  <h3>Venue : KL University</h3>
                 </div>
               </div>
             </div>
@@ -53,7 +86,9 @@ const Events = () => {
                   <button>REGISTER</button>
                 </div>
                 <div className="dright">
-                  <h3>09 : 30 AM  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;25 | 02 | 2025 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Venue : KL University</h3>
+                <h3>09 : 00 AM</h3>
+                  <h3>25 | 02 | 2025</h3>
+                  <h3>Venue : KL University</h3>
                 </div>
               </div>
             </div>
@@ -76,7 +111,9 @@ const Events = () => {
                   <button>REGISTER</button>
                 </div>
                 <div className="dright">
-                  <h3>09 : 30 AM  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;25 | 02 | 2025 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Venue : KL University</h3>
+                <h3>09 : 00 AM</h3>
+                  <h3>25 | 02 | 2025</h3>
+                  <h3>Venue : KL University</h3>
                 </div>
               </div>
             </div>
@@ -93,7 +130,9 @@ const Events = () => {
                   <button>REGISTER</button>
                 </div>
                 <div className="dright">
-                  <h3>09 : 30 AM  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;25 | 02 | 2025 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Venue : KL University</h3>
+                <h3>09 : 00 AM</h3>
+                  <h3>25 | 02 | 2025</h3>
+                  <h3>Venue : KL University</h3>
                 </div>
               </div>
             </div>
@@ -110,7 +149,9 @@ const Events = () => {
                   <button>REGISTER</button>
                 </div>
                 <div className="dright">
-                  <h3>09 : 30 AM  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;25 | 02 | 2025 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Venue : KL University</h3>
+                <h3>09 : 00 AM</h3>
+                  <h3>25 | 02 | 2025</h3>
+                  <h3>Venue : KL University</h3>
                 </div>
               </div>
             </div>
@@ -127,7 +168,9 @@ const Events = () => {
                   <button>REGISTER</button>
                 </div>
                 <div className="dright">
-                  <h3>09 : 30 AM  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;25 | 02 | 2025 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Venue : KL University</h3>
+                <h3>09 : 00 AM</h3>
+                  <h3>25 | 02 | 2025</h3>
+                  <h3>Venue : KL University</h3>
                 </div>
               </div>
             </div>
@@ -144,7 +187,9 @@ const Events = () => {
                   <button>REGISTER</button>
                 </div>
                 <div className="dright">
-                  <h3>09 : 30 AM  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;25 | 02 | 2025 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Venue : KL University</h3>
+                <h3>09 : 00 AM</h3>
+                  <h3>25 | 02 | 2025</h3>
+                  <h3>Venue : KL University</h3>
                 </div>
               </div>
             </div>
@@ -168,7 +213,9 @@ const Events = () => {
                   <button>REGISTER</button>
                 </div>
                 <div className="dright">
-                  <h3>09 : 30 AM  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;25 | 02 | 2025 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Venue : KL University</h3>
+                <h3>09 : 00 AM</h3>
+                  <h3>25 | 02 | 2025</h3>
+                  <h3>Venue : KL University</h3>
                 </div>
               </div>
             </div>
@@ -185,7 +232,9 @@ const Events = () => {
                   <button>REGISTER</button>
                 </div>
                 <div className="dright">
-                  <h3>09 : 30 AM  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;25 | 02 | 2025 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Venue : KL University</h3>
+                <h3>09 : 00 AM</h3>
+                  <h3>25 | 02 | 2025</h3>
+                  <h3>Venue : KL University</h3>
                 </div>
               </div>
             </div>
@@ -202,7 +251,9 @@ const Events = () => {
                   <button>REGISTER</button>
                 </div>
                 <div className="dright">
-                  <h3>09 : 30 AM  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;25 | 02 | 2025 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Venue : KL University</h3>
+                <h3>09 : 00 AM</h3>
+                  <h3>25 | 02 | 2025</h3>
+                  <h3>Venue : KL University</h3>
                 </div>
               </div>
             </div>
@@ -224,7 +275,9 @@ const Events = () => {
                   <button>REGISTER</button>
                 </div>
                 <div className="dright">
-                  <h3>09 : 30 AM  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;25 | 02 | 2025 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Venue : KL University</h3>
+                <h3>09 : 00 AM</h3>
+                  <h3>25 | 02 | 2025</h3>
+                  <h3>Venue : KL University</h3>
                 </div>
               </div>
             </div>
@@ -241,7 +294,9 @@ const Events = () => {
                   <button>REGISTER</button>
                 </div>
                 <div className="dright">
-                  <h3>09 : 30 AM  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;25 | 02 | 2025 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Venue : KL University</h3>
+                <h3>09 : 00 AM</h3>
+                  <h3>25 | 02 | 2025</h3>
+                  <h3>Venue : KL University</h3>
                 </div>
               </div>
             </div>
@@ -258,7 +313,9 @@ const Events = () => {
                   <button>REGISTER</button>
                 </div>
                 <div className="dright">
-                  <h3>09 : 30 AM  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;25 | 02 | 2025 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Venue : KL University</h3>
+                <h3>09 : 00 AM</h3>
+                  <h3>25 | 02 | 2025</h3>
+                  <h3>Venue : KL University</h3>
                 </div>
               </div>
             </div>
@@ -281,7 +338,9 @@ const Events = () => {
                   <button>REGISTER</button>
                 </div>
                 <div className="dright">
-                  <h3>09 : 30 AM  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;25 | 02 | 2025 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Venue : KL University</h3>
+                <h3>09 : 00 AM</h3>
+                  <h3>25 | 02 | 2025</h3>
+                  <h3>Venue : KL University</h3>
                 </div>
               </div>
             </div>
@@ -298,7 +357,9 @@ const Events = () => {
                   <button>REGISTER</button>
                 </div>
                 <div className="dright">
-                  <h3>09 : 30 AM  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;25 | 02 | 2025 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Venue : KL University</h3>
+                <h3>09 : 00 AM</h3>
+                  <h3>25 | 02 | 2025</h3>
+                  <h3>Venue : KL University</h3>
                 </div>
               </div>
             </div>
@@ -321,7 +382,9 @@ const Events = () => {
                   <button>REGISTER</button>
                 </div>
                 <div className="dright">
-                  <h3>09 : 30 AM  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;25 | 02 | 2025 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Venue : KL University</h3>
+                <h3>09 : 00 AM</h3>
+                  <h3>25 | 02 | 2025</h3>
+                  <h3>Venue : KL University</h3>
                 </div>
               </div>
             </div>
@@ -338,7 +401,9 @@ const Events = () => {
                   <button>REGISTER</button>
                 </div>
                 <div className="dright">
-                  <h3>09 : 30 AM  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;25 | 02 | 2025 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Venue : KL University</h3>
+                <h3>09 : 00 AM</h3>
+                  <h3>25 | 02 | 2025</h3>
+                  <h3>Venue : KL University</h3>
                 </div>
               </div>
             </div>
@@ -362,7 +427,9 @@ const Events = () => {
                   <button>REGISTER</button>
                 </div>
                 <div className="dright">
-                  <h3>09 : 30 AM  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;25 | 02 | 2025 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Venue : KL University</h3>
+                <h3>09 : 00 AM</h3>
+                  <h3>25 | 02 | 2025</h3>
+                  <h3>Venue : KL University</h3>
                 </div>
               </div>
             </div>
@@ -379,7 +446,9 @@ const Events = () => {
                   <button>REGISTER</button>
                 </div>
                 <div className="dright">
-                  <h3>09 : 30 AM  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;25 | 02 | 2025 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Venue : KL University</h3>
+                <h3>09 : 00 AM</h3>
+                  <h3>25 | 02 | 2025</h3>
+                  <h3>Venue : KL University</h3>
                 </div>
               </div>
             </div>

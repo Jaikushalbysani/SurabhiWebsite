@@ -32,7 +32,7 @@ body::-webkit-scrollbar {
   color: #fff;
   z-index: 2;
   font-family: 'Cinzel Decorative';
-  margin-top: -950px;
+  margin-top: -800px;
   text-shadow: 
     0 0 7px #ffffff95,
     0 0 10px #ffffffc9,
@@ -422,6 +422,9 @@ video {
 .footer img{
   width: 98%;
 }
+.footermob{
+  display: none;
+}
 
 html.lenis {
   height: auto;
@@ -441,4 +444,114 @@ html.lenis {
 
 .lenis.lenis-scrolling iframe {
   pointer-events: none;
+}
+@media screen and (max-width: 550px) {
+  .video-container{
+    margin: 0px;
+  }
+  .video2{
+    margin: 0px;
+  }
+  #videos{
+    margin: 0px;
+    height: 650px;
+    margin-top: -95px;
+  }
+  .blur{
+    display: none;
+  }
+  .headline h1{
+    font-size: 60px;
+    margin-top: -1300px;
+  }
+  #scroller{
+    margin-top: -200px;
+  }
+  #scroller-in h4{
+    font-size: 30px;
+  }
+  .what1{
+    margin-top: -70px;
+  }
+  .what1 h1{
+    font-size: 25px;
+  }
+  .what1 img{
+    width:400px;
+  }
+  .what1 p{
+    font-size: 15px;
+    line-height: 30px;
+  }
+  .video-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #scroller-in1 h4{
+    font-size: 30px;
+  }
+  .prt1 button{
+    width:200px;
+    font-size: 15px;
+  }
+  .prt1 p{
+    font-size: 15px;
+    width:300px;
+  }
+  .guests h1{
+    font-size: 25px;
+  }
+  .guests img{
+    width:450px;
+  }
+  .imgscroll img{
+    width:200px;
+  }
+  .y2024 img{
+    width:370px;
+  }
+  .y2024d p{
+    font-size: 15px;
+    width:300px;
+    margin: 0px;
+  }
+  .y2024d{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0px;
+    gap:20px;
+  }
+  .years{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0px;
+  }
+  .y2024{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0px;
+    gap:20px;
+  }
+  .y2024d img{
+    border-radius: 20px;
+    margin: 0px;
+  }
+  .footermob{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .footer img{
+    display: none;
+  }
+  .footermob img{
+    width:370px;
+  }
 }
