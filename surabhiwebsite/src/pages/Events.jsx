@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import './Events.css';
+import { Link } from 'react-router-dom';
 const event = 'https://res.cloudinary.com/ds18h1q0k/image/upload/v1735380954/cmgsoon_bo9wmm.png';
 const footer = 'https://res.cloudinary.com/ds18h1q0k/image/upload/v1735379767/footer_cvrjgz.png';
 
@@ -45,7 +46,8 @@ const Events = () => {
               <p>Surabhi 2025 is a two-day national cultural fest at KL University that highlights student creativity through music, dance, drama, and artistic expressions. </p>
               <div className="down">
                 <div className="dleft">
-                  <button>REGISTER</button>
+                <Link to="/terms">
+                  <button>REGISTER</button></Link>
                 </div>
                 <div className="dright">
                   <h3>09 : 00 AM</h3>
@@ -64,7 +66,8 @@ const Events = () => {
               <p>Surabhi 2025 is a two-day national cultural fest at KL University that highlights student creativity through music, dance, drama, and artistic expressions. </p>
               <div className="down">
                 <div className="dleft">
-                  <button>REGISTER</button>
+                <Link to="/terms">
+                  <button>REGISTER</button></Link>
                 </div>
                 <div className="dright">
                 <h3>09 : 00 AM</h3>

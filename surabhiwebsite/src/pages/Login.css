@@ -4,6 +4,7 @@
   align-items: center;
   min-height: 100vh;
   padding: 20px;
+
 }
 
 .login-form {
@@ -12,13 +13,13 @@
   border-radius: 30px;
   width: 100%;
   box-shadow: 
-  0 0 151px #9200baad;
-  transition: 0.5s;
+  0 0 200px #9200ba68;
   max-width: 400px;
+  transition: 0.5s;
 }
 .login-form:hover{
-    box-shadow: 
-    0 0 401px #c800ffcf;
+  box-shadow: 
+  0 0 500px #9200bab8;
     transition: 0.5s;
 }
 .login-form h2 {
@@ -27,9 +28,6 @@
   color: #691fa2;
 }
 
-.form-group {
-  margin-bottom: 20px;
-}
 
 .form-group input {
   width: 100%;
@@ -41,13 +39,15 @@
 
 button[type="submit"] {
   width: 100%;
-  padding: 15px;
+  padding: 18px;
   background-color: #691fa257;
   color: #691fa2;
   border: 2px solid #691fa2;
   border-radius: 40px;
   font-size: 16px;
+  font-family: "Poppins";
   cursor: pointer;
+  margin-top: 40px;
   transition: background-color 0.3s;
 }
 

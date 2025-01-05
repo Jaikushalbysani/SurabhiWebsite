@@ -9,6 +9,10 @@ import Eventslist from './pages/Eventslist';
 import Register from './pages/Register';
 import Schedule from './pages/Schedule';
 import Needs from './pages/Needs';
+import ForgotPassword from './pages/ForgotPassword';
+import Otherspayment from './pages/Otherspayment';
+import Terms from './pages/Terms';
+import Profile from './pages/Profile';
 import './App.css';
 
 
@@ -26,6 +30,10 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/schedule" element={<Schedule />} />
           <Route path="/needs" element={<Needs />} />
+          <Route path="/forgot-password" element={<ForgotPassword />} />
+          <Route path="/otherspayment" element={<Otherspayment />} />
+          <Route path="/terms" element={<Terms />} />
+          <Route path="/profile" element={<Profile />} />
         </Routes>
       </div>
     </Router>

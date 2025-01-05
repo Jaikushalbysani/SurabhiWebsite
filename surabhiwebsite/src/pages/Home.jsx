@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Home.css';
 const video1 = 'https://res.cloudinary.com/ds18h1q0k/video/upload/v1735379791/vid1_wltntt.mp4';
@@ -25,6 +25,7 @@ const g11 = 'https://res.cloudinary.com/ds18h1q0k/image/upload/v1735379759/g11_y
 const y2024 = 'https://res.cloudinary.com/ds18h1q0k/image/upload/v1735379757/2024_blyzpk.png';
 const y2023 = 'https://res.cloudinary.com/ds18h1q0k/image/upload/v1735379754/2022_r8jbik.png';
 const y2022 = 'https://res.cloudinary.com/ds18h1q0k/image/upload/v1735379754/2022_r8jbik.png';
+const corg = 'https://res.cloudinary.com/ds18h1q0k/image/upload/v1736089836/fdvsd_ntnhjg.png';
 const footer = 'https://res.cloudinary.com/ds18h1q0k/image/upload/v1735379767/footer_cvrjgz.png';
 const footermob = 'https://res.cloudinary.com/ds18h1q0k/image/upload/v1735379750/footermob_cmzq0p.png';
 import Lenis from '@studio-freight/lenis';
@@ -32,6 +33,35 @@ import Lenis from '@studio-freight/lenis';
 
 
 const Home = () => {
+  const [countdown, setCountdown] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+
+  useEffect(() => {
+    const targetDate = new Date('2025-02-28T00:00:00');
+    
+    const interval = setInterval(() => {
+      const now = new Date();
+      const difference = targetDate - now;
+
+      console.log('Difference:', difference);
+
+      const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+      console.log('Days:', days, 'Hours:', hours, 'Minutes:', minutes, 'Seconds:', seconds);
+
+      setCountdown({ days, hours, minutes, seconds });
+
+      if (difference < 0) {
+        clearInterval(interval);
+        setCountdown({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+      }
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   useEffect(() => {
     const lenis = new Lenis({
       duration: 1.2,
@@ -103,7 +133,26 @@ const Home = () => {
         </div>
       </div>
 
-
+    <div className="timer">
+      <div className="countdown">
+        <div className="time-block">
+          <span className="time">{countdown.days}</span>
+          <span className="label">Days</span>
+        </div>
+        <div className="time-block">
+          <span className="time">{countdown.hours}</span>
+          <span className="label">Hours</span>
+        </div>
+        <div className="time-block">
+          <span className="time">{countdown.minutes}</span>
+          <span className="label">Minutes</span>
+        </div>
+        <div className="time-block">
+          <span className="time">{countdown.seconds}</span>
+          <span className="label">Seconds</span>
+        </div>
+      </div>
+    </div>
 
       <div className="what1">
         <h1>What is Surabhi?</h1>
@@ -145,7 +194,7 @@ const Home = () => {
         </div>
         <div className="prt1">
           <img src={l2} alt="" className="l2" />
-          <Link to="/">
+          <Link to="/profile">
           <button>Registered Events</button></Link>
           <p>Keep track of all the events you’ve registered for. Manage your entries, view details, and make changes if needed.</p>
         </div>
@@ -214,6 +263,40 @@ const Home = () => {
             <p>Surabhi 2025 is a two-day national cultural fest at KL University that highlights student creativity through music, dance, drama, and artistic expressions. With renowned artists and exceptional student talent, this event embodies diversity in a supportive and vibrant environment.</p>
             <img src={y2022i} alt="" className="y2022i" />
           </div>
+
+          <div className="what1">
+        <h1>Assosiated Partners</h1>
+        <img src={underline} alt="" className="head" />
+        <div className="comps">
+          <div className="comp">
+            <img src={corg} alt="" className="" />
+          </div>
+          <div className="comp">
+            <img src={corg} alt="" className="" />
+          </div>
+          <div className="comp">
+            <img src={corg} alt="" className="" />
+          </div>
+          <div className="comp">
+            <img src={corg} alt="" className="" />
+          </div>
+          <div className="comp">
+            <img src={corg} alt="" className="" />
+          </div>
+          <div className="comp">
+            <img src={corg} alt="" className="" />
+          </div>
+          <div className="comp">
+            <img src={corg} alt="" className="" />
+          </div>
+          <div className="comp">
+            <img src={corg} alt="" className="" />
+          </div>
+          <div className="comp">
+            <img src={corg} alt="" className="" />
+          </div>
+        </div>  
+      </div>
 
         </div>
       </div>

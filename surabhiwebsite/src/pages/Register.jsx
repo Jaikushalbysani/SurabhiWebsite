@@ -1,113 +1,61 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Register.css';
+import { Link } from 'react-router-dom';
 
 const Register = () => {
-  const [formData, setFormData] = React.useState({
+  const [formData, setFormData] = useState({
     name: '',
     email: '',
     phone: '',
-    address: '',
+    profession: '',
+    gender: '',
+    referral: '',
     password: '',
-    college: ''
+    college: '',
   });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prevState => ({
-      ...prevState,
-      [name]: value
-    }));
+    setFormData({ ...formData, [name]: value });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(formData);
   };
 
   return (
     <div className="register-container">
-      <form onSubmit={handleSubmit} className="register-form">
-        <h2>Register</h2>
+      <h2>Register for Surabhi 2025</h2>
+      <p>Join us for the celebration of culture and talent</p>
+      <form onSubmit={handleSubmit}>
+        <input type="text" name="name" placeholder="Enter your name" value={formData.name} onChange={handleChange} required />
+        <input type="email" name="email" placeholder="Enter your email" value={formData.email} onChange={handleChange} required />
+        <input type="tel" name="phone" placeholder="Enter your Phone number" value={formData.phone} onChange={handleChange} required />
+        <select name="profession" value={formData.profession} onChange={handleChange} required>
+          <option value="">Select Profession</option>
+          <option value="student">Student</option>
+          <option value="professional">Professional</option>
+        </select>
+        <select name="gender" value={formData.gender} onChange={handleChange} required>
+          <option value="">Select Gender</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+        <input type="text" name="Collegeid" placeholder="Enter college ID (If available)" value={formData.referral} onChange={handleChange} />
+        <input type="password" name="password" placeholder="Enter your password" value={formData.password} onChange={handleChange} required />
+        <select name="college" value={formData.college} onChange={handleChange} required>
+          <option value="">Select College</option>
+          <option value="college1">KL University</option>
+          <option value="college2">Other</option>
+        </select>
         
-        <div className="form-group">
-          <input
-            type="text"
-            id="name"
-            name="name"
-            placeholder="Enter your name"
-            value={formData.name}
-            onChange={handleChange}
-            required
-          />
-        </div>
+        <Link to="/otherspayment">
+          <button type="button">Next</button></Link>
 
-        <div className="form-group">
-          <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="Enter your email"
-            value={formData.email}
-            onChange={handleChange}
-            required
-          />
-        </div>
-
-        <div className="form-group">
-          <input
-            type="tel"
-            id="phone"
-            name="phone"
-            placeholder="Enter your phone number"
-            value={formData.phone}
-            onChange={handleChange}
-            required
-          />
-        </div>
-
-        <div className="form-group">
-          <textarea
-            id="address"
-            name="address"
-            placeholder="Enter your address"
-            value={formData.address}
-            onChange={handleChange}
-            required
-          />
-        </div>
-
-        <div className="form-group">
-          <input
-            type="password"
-            id="password"
-            name="password"
-            placeholder="Enter your password"
-            value={formData.password}
-            onChange={handleChange}
-            required
-          />
-        </div>
-
-        <div className="form-group">
-          <select
-            id="college"
-            name="college"
-            value={formData.college}
-            onChange={handleChange}
-            required
-          >
-            <option value="">Select college</option>
-            <option value="kl_university">KL University</option>
-            <option value="other">Other College</option>
-          </select>
-        </div>
-
-        <button type="submit">Register</button>
-        
-        <p className="login-link">
-          Already have an account? <a href="/login">Login here</a>
-        </p>
       </form>
+      <p className="login-link">
+        Already have an account? <a href="/login">Login here</a>
+      </p>
     </div>
   );
 };
