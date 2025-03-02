@@ -11,10 +11,8 @@ const Events = () => {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
     
-    // Select all elements with class 'box'
     const boxes = document.querySelectorAll('.box');
     
-    // Apply animation to each box
     boxes.forEach(box => {
       gsap.fromTo(box,
         {
